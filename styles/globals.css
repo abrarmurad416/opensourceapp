@@ -47,37 +47,29 @@
     max-width: 640px;
     background-image: radial-gradient(
             at 27% 37%,
-            hsla(146, 100%, 50%, 1) 0px,
+            hsla(40, 100%, 50%, 1) 0px,
             transparent 0%
         ),
-        radial-gradient(
-            at 97% 21%,
-            hsla(202, 100%, 50%, 1) 0px,
-            transparent 50%
-        ),
+        radial-gradient(at 97% 21%, hsla(0, 100%, 50%, 1) 0px, transparent 50%),
         radial-gradient(
             at 52% 99%,
-            hsla(260, 100%, 50%, 1) 0px,
+            hsla(280, 100%, 50%, 1) 0px,
             transparent 50%
         ),
         radial-gradient(
             at 10% 29%,
-            hsla(290, 100%, 50%, 1) 0px,
+            hsla(260, 100%, 50%, 1) 0px,
             transparent 50%
         ),
         radial-gradient(
             at 97% 96%,
-            hsla(247, 100%, 50%, 1) 0px,
+            hsla(330, 100%, 50%, 1) 0px,
             transparent 50%
         ),
-        radial-gradient(
-            at 33% 50%,
-            hsla(207, 100%, 50%, 1) 0px,
-            transparent 50%
-        ),
+        radial-gradient(at 33% 50%, hsla(60, 100%, 50%, 1) 0px, transparent 50%),
         radial-gradient(
             at 79% 53%,
-            hsla(280, 100%, 50%, 1) 0px,
+            hsla(300, 100%, 50%, 1) 0px,
             transparent 50%
         );
     position: absolute;

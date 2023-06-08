@@ -2,8 +2,8 @@ import React, { Children } from "react";
 import "@styles/globals.css";
 
 export const metadata = {
-    title: "task-management-systen",
-    description: "lightning speed tasks",
+    title: "open source contributor",
+    description: "contribute to open source lightning fast",
 };
 
 const RootLayout = ({ children }) => {
