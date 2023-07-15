@@ -1,27 +1,28 @@
-import React, { Children } from "react";
 import "@styles/globals.css";
+
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
 
 export const metadata = {
-    title: "open source contributor",
-    description: "contribute to open source lightning fast",
+    title: "opensource contributor",
+    description: "contribute to open source",
 };
 
-const RootLayout = ({ children }) => {
-    return (
-        <html lang="en">
-            <body>
+const RootLayout = ({ children }) => (
+    <html lang="en">
+        <body>
+            <Provider>
                 <div className="main">
                     <div className="gradient" />
                 </div>
+
                 <main className="app">
                     <Nav />
                     {children}
                 </main>
-            </body>
-        </html>
-    );
-};
+            </Provider>
+        </body>
+    </html>
+);
 
 export default RootLayout;
