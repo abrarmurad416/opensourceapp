@@ -11,8 +11,9 @@ const handler = NextAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         }),
     ],
-    callbacks: {
+    callback: {
         async session({ session }) {
+            // store the user id from MongoDB to session
             const sessionUser = await User.findOne({
                 email: session.user.email,
             });
@@ -24,12 +25,14 @@ const handler = NextAuth({
             try {
                 await connectToDB();
 
+                // check if user already exists
                 const userExists = await User.findOne({ email: profile.email });
 
+                // if not, create a new document and save user in MongoDB
                 if (!userExists) {
                     await User.create({
                         email: profile.email,
-                        username: profile.name.replace(/\s/g, "").toLowerCase(),
+                        username: profile.name.replace(" ", "").toLowerCase(),
                         image: profile.picture,
                     });
                 }
@@ -41,7 +44,6 @@ const handler = NextAuth({
             }
         },
     },
-    secret: process.env.NEXTAUTH_SECRET,
 });
 
 export { handler as GET, handler as POST };
